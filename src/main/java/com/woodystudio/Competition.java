@@ -16,4 +16,11 @@ public class Competition {
     public Team getVisitingTeam() {
         return visitingTeam;
     }
+
+    public Score play() {
+        Score score = new Score();
+        score.setFirstPoint(2);
+        score.setSecondPoint(1);
+        return score;
+    }
 }
