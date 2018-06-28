@@ -17,10 +17,8 @@ public class Competition {
         return visitingTeam;
     }
 
-    public Score play() {
-        Score score = new Score();
-        score.setFirstPoint(2);
-        score.setSecondPoint(1);
-        return score;
+    public GameResult play() {
+        GameResult gameResult = new GameResult(homeTeam.getName(), visitingTeam.getName(), ResultType.DRAW);
+        return gameResult;
     }
 }

@@ -3,7 +3,7 @@ package com.woodystudio;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Group {
+public class GroupGame {
     private Team aTeam;
     private Team bTeam;
     private Team cTeam;
@@ -41,9 +41,9 @@ public class Group {
         this.dTeam = dTeam;
     }
 
-    public List<Competition> run() {
-        List<Competition> competitions = new ArrayList<>();
-//        competitions.add(competition);
-        return competitions;
+    public List<GameResult> run() {
+        List<GameResult> results = new ArrayList<>();
+
+        return results;
     }
 }

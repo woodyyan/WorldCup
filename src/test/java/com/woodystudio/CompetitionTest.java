@@ -7,12 +7,15 @@ public class CompetitionTest {
     @Test
     public void shouldGetRandomScoreWhenCompeteGivenHomeTeamAndVisitingTeam() {
         Team homeTeam = new Team();
+        homeTeam.setName("China");
         Team visitingTeam = new Team();
+        visitingTeam.setName("Japan");
 
         Competition competition = new Competition(homeTeam, visitingTeam);
-        Score score = competition.play();
+        GameResult gameResult = competition.play();
 
-        Assert.assertEquals(score.getFirstPoint(), 2);
-        Assert.assertEquals(score.getSecondPoint(), 1);
+        Assert.assertEquals("China", gameResult.getHomeTeam());
+        Assert.assertEquals("Japan", gameResult.getVisitingTeam());
+        Assert.assertEquals(ResultType.DRAW, gameResult.getResult());
     }
 }
